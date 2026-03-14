@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 47 67% 97%;
+    --foreground: 218 35% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 35% 16%;
+    --primary: 208 67% 29%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 24 92% 58%;
+    --secondary-foreground: 24 75% 12%;
+    --muted: 45 32% 92%;
+    --muted-foreground: 217 15% 40%;
+    --accent: 146 37% 78%;
+    --accent-foreground: 155 41% 18%;
+    --border: 36 25% 85%;
+    --input: 36 25% 85%;
+    --ring: 208 67% 29%;
+    --radius: 1.25rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(244, 177, 79, 0.18), transparent 28%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(247, 244, 234, 0.98));
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
